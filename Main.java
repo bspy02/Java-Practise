@@ -5,9 +5,10 @@ class Main
 {
     public static void main(String[] args) 
     {
+        ArrayList<Integer> nums = new ArrayList<Integer>();
         int n     = Integer.parseInt(input("Length: "));
         int range = Integer.parseInt(input("Range: "));        
-        ArrayList<Integer> nums = randlist(n,range);
+        nums = randlist(n,range);
         System.out.println(nums);
         System.out.println(insertsort(nums));
         System.out.println(nums);
@@ -27,7 +28,7 @@ class Main
     public static ArrayList<Integer> insertsort(ArrayList<Integer> al)
     {
         ArrayList<Integer> lis = new ArrayList<>(al);
-        lis.add(0,0);
+        lis.add(0,-1);
         for (int i = 1; i < lis.size(); i++)
         {
             int num = lis.get(i);
